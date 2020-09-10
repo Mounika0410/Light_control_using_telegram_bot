@@ -23,16 +23,17 @@ def input_message(bot,update):
       chat_id = update.message.chat_id
       bot.send_message(chat_id,text="Light turned on")
       bot.send_photo(chat_id,photo='https://images.app.goo.gl/vboPtjpGbD3iUTrf6')
-      feed = aio.feeds('lightbot')
-      aio.send_data(feed.key,1)
+      value=Data(value=1)
+      value_send=aio.create_data('lightbot',value)
+      
       
       
    elif text=='turn off':
       chat_id = update.message.chat_id
       bot.send_message(chat_id,text="Light turned off")
       bot.send_photo(chat_id,photo='https://images.app.goo.gl/cU8fsGt7sSjdKS4b8')
-      feed = aio.feeds('lightbot')
-      aio.send_data(feed.key,0)
+      value=Data(value=1)
+      value_send=aio.create_data('lightbot',value)
       
 Token=os.getenv('Token')   
 u = Updater('Token')
