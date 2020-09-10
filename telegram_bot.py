@@ -1,8 +1,8 @@
+from Adafruit_IO import Client,Feed
+import os
 x = os.getenv('x') #ADAFRUIT_IO_USERNAME
 y = os.getenv('y') #ADAFRUIT_IO_KEY
 
-from Adafruit_IO import Client,Feed
-import os
 aio=Client(x,y)
 new = Feed(name='lightbot')
 result= aio.create_feed(new)
