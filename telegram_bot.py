@@ -3,9 +3,7 @@ import os
 x = os.getenv('x') #ADAFRUIT_IO_USERNAME
 y = os.getenv('y') #ADAFRUIT_IO_KEY
 
-aio=Client(x,y)
-new = Feed(name='lightbot')
-result= aio.create_feed(new)
+
 from telegram.ext import Updater,CommandHandler,MessageHandler,Filters
 import requests
 def turnon(bot,update):
