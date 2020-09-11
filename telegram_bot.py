@@ -32,7 +32,7 @@ def input_message(bot,update):
       chat_id = update.message.chat_id
       bot.send_message(chat_id,text="Light turned off")
       bot.send_photo(chat_id,photo='https://images.app.goo.gl/cU8fsGt7sSjdKS4b8')
-      value=Data(value=1)
+      value=Data(value=0)
       value_send=aio.create_data('lightbot',value)
       
 Token=os.getenv('Token')   
