@@ -28,7 +28,7 @@ def input_message(bot,update):
       
       
       
-   elif text=='turn off':
+   elif text=='turn off': 
       chat_id = update.message.chat_id
       bot.send_message(chat_id,text="Light turned off")
       bot.send_photo(chat_id,photo='https://images.app.goo.gl/cU8fsGt7sSjdKS4b8')
