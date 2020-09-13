@@ -35,7 +35,7 @@ def input_message(bot,update):
       value=Data(value=0)
       value_send=aio.create_data('lightbot',value)
       
-Token=os.getenv('Token')   
+Token=os.getenv(Token)   
 u = Updater('Token')
 dp = u.dispatcher
 dp.add_handler(CommandHandler('turnon',turnon))
